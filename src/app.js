@@ -102,7 +102,7 @@ function filterByNoOfAwardsxTeamxAge(noOfAwards, team, age) {
 }
 //Progression 9 - Sort players in descending order of their age
 function SortByAge() {
-  players.sort((a, b) => b.age - a.age);
+  players.sort((a, b) => b.age - a.age); //Note: For my own reference: NEW CONCEPT: b - a is descending and the opposite is ascending
 }
 //Progression 10 - Sort players beloging to _____ team in descending order of awards won
 function FilterByTeamxSortByNoOfAwards(team) {
@@ -126,9 +126,7 @@ function SortByAge() {
 //Sort the awards won by them in reverse chronological order
 function FilterByTeamxSortByNoOfAwards(team) {
   const filteredPlayers = players.filter(player => player.team === team);
-  let x = awards.length;
-
-  filteredPlayers.sort((a, b) => b.x - a.x);
+  filteredPlayers.sort((a, b) => b.awards.length - a.awards.length);
   
   return filteredPlayers;
 }
