@@ -112,7 +112,7 @@ function FilterByTeamxSortByNoOfAwards(team) {
   
   const sortedAwardsCount = filteredPlayers.map(function(player) {
     return player.awards.length;
-  }).sort((a, b) => b - a);
+  }).sort((a, b) => b - a); //same concept of sorting as used above to achieve it in a single line
   
   return sortedAwardsCount;
 }
